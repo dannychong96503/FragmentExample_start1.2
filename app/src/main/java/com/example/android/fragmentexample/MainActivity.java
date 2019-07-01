@@ -25,11 +25,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SimpleFragment.OnFragmentInteractionListener{
     private Button mButton;
     private boolean isFragmentDisplayed = false;
-
+    private int mRadioButtonChoice = 2; // The default (no choice).
     // Saved instance state key.
     static final String STATE_FRAGMENT = "state_of_fragment";
 
@@ -68,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void displayFragment() {
         // Instantiate the fragment.
-        SimpleFragment simpleFragment = SimpleFragment.newInstance();
+        SimpleFragment simpleFragment =
+                SimpleFragment.newInstance(mRadioButtonChoice);
 
         // Get the FragmentManager and start a transaction.
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -113,4 +115,14 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
 
     }
-}
+
+
+        @Override
+        public void onRadioButtonChoice(int choice) {
+            // Keep the radio button choice to pass it back to the fragment.
+            mRadioButtonChoice = choice;
+            Toast.makeText(this, "Choice is " + Integer.toString(choice),
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
