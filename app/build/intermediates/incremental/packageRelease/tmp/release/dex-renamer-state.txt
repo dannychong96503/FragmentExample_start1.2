@@ -1,0 +1,4 @@
+#Mon Jul 01 21:56:03 SGT 2019
+base.0=C\:\\Users\\ASUS\\AndroidStudioProjects\\FragmentExample_start\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+path.0=classes.dex
+renamed.0=classes.dex

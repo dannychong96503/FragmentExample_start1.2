@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Jul 01 21:56:03 SGT 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\FragmentExample_start\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+0.path=classes.dex
+0.set=DEX
+count=1
